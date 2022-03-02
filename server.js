@@ -16,7 +16,8 @@ app.get('/', function(req,resp){
     resp.sendFile( path.join(__dirname, 'react-project/build/index.html'))
 })
 
-//리액트 프로젝트 내에서 라우팅하려면  why? 이 셋팅없이 /about하면 직접적으로 html을 가져온다.  라우팅은 직접적으로 html을 보여주는 것이 아니기 때문에 
+//리액트 프로젝트 내에서 라우팅하려면  
+//why? 이 셋팅없이 /about하면 직접적으로 html을 가져온다.  라우팅은 직접적으로 html을 보여주는 것이 아니기 때문이다.
 app.get('*', function(req,resp){
     resp.sendFile( path.join(__dirname, 'react-project/build/index.html'))
 })
